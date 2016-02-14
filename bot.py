@@ -1,4 +1,4 @@
-# # # Twitter bot that tweets sports scores from a file.
+# # # --- experimenting with twitter bots --- # # #
 
 from twython import Twython, TwythonError
 import time
@@ -15,13 +15,13 @@ twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
 # line = "Bot test 2."
 # twitter.update_status(status=line)
 
-# # # --- SEARCH QUERIES
-# search_results = twitter.search(q='sooners', count=5)
-# try:
-#     for tweet in search_results["statuses"]:
-#         twitter.retweet(id=tweet["id_str"])
-# except TwythonError as e:
-#     print e
+# # --- SEARCH QUERIES
+search_results = twitter.search(q='sooners', count=5)
+try:
+    for tweet in search_results["statuses"]:
+        twitter.retweet(id=tweet["id_str"])
+except TwythonError as e:
+    print e
 
 # # # --- FILTERING SEARCH QUERIES
 # exclude = ["Jayhawks", "Boomer", "LOL"]
@@ -41,38 +41,27 @@ twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
 
 
 # # # --- POSTING FROM TXT FILE
-path = 'csv/test.csv'
-try:
-    with open(path, 'r+') as f:
-        buff = f.readlines()
+# path = 'csv/test.csv'
+# try:
+#     with open(path, 'r+') as f:
+#         buff = f.readlines()
 
-    for line in buff[:]:
-        line = line.strip(r'\n')
-        if len(line) <= 140 and len(line) > 0:
-            # twitter.update_status(status=line)
-            print line
-            with open(path, 'w') as f:
-                buff.remove(line)
-                f.writelines(buff)
-            time.sleep(10)
-        else:
-            with open(path, 'w') as f:
-                buff.remove(line)
-                f.writelines(buff)
-            print ("Skipped! Char length violation.")
-            continue
-        # print ("Next line...")
+#     for line in buff[:]:
+#         line = line.strip(r'\n')
+#         if len(line) <= 140 and len(line) > 0:
+#             # twitter.update_status(status=line)
+#             print line
+#             with open(path, 'w') as f:
+#                 buff.remove(line)
+#                 f.writelines(buff)
+#             time.sleep(10)
+#         else:
+#             with open(path, 'w') as f:
+#                 buff.remove(line)
+#                 f.writelines(buff)
+#             print ("Skipped! Char length violation.")
+#             continue
+#         # print ("Next line...")
 
-except TwythonError as e:
-    print (e)
-
-# def get_csv():
-#     csv_path = 'csv/test.csv'
-#     csv_file = open(csv_path, 'rb')
-#     # csv_obj = csv.DictReader(csv_file)
-#     csv_list = list(csv_file)
-#     return csv_list
-
-# obj_list = get_csv()
-# for row in obj_list:
-#     print row
+# except TwythonError as e:
+#     print (e)

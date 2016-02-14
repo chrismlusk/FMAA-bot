@@ -1,8 +1,11 @@
-import csv
 import requests
 from bs4 import BeautifulSoup
+# import csv
+from twython import Twython, TwythonError
+import time
 
-url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
+# url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
+url = 'http://www.ncaa.com/scoreboard/basketball-men/d1/2016/02/12'
 response = requests.get(url)
 html = response.content
 
@@ -30,23 +33,40 @@ for game in games:
         list_of_rows.append(list_of_cells)
     list_of_games.append(list_of_rows)
 
-# Determine the winner and create update sentence.
 list_of_winners = []
-i = 0
-tag = list_of_games
-for game in tag:
-    if tag[i][0][1] > tag[i][1][1]:
-        x = ["FINAL: " + tag[i][0][0] + " " + tag[i][0][1] + ", " + tag[i][1][0] + " " + tag[i][1][1] + ". #fmaa16"]
-        list_of_winners.append(x)
+for row in list_of_games:
+    h_team = row[1][0]
+    a_team = row[0][0]
+    h_score = row[1][1]
+    a_score = row[0][1]
+    if h_score > a_score:
+        update = "%s beats %s, %s-%s. %s advances!" % (h_team, a_team, h_score, a_score, h_team)
     else:
-        x = ["FINAL: " + tag[i][1][0] + " " + tag[i][1][1] + ", " + tag[i][0][0] + " " + tag[i][0][1] + ". #fmaa16"]
-        list_of_winners.append(x)
-    i += 1
+        update = "%s beats %s, %s-%s. %s advances!" % (a_team, h_team, a_score, h_score, a_team)
+    list_of_winners.append(update)
 
+# Authorize Friendship Madness app.
+app_key = 'bfzIzp6FRmUChOFfujhvLwISE'
+app_secret = 'VoSkGgcJD29QlOCQmVyFtv7KxgwYYunuUSqUEh1zqB7IgnAj4Z'
+oauth_token = '21734466-gy5DbrVqB5V8H7pImfdMS17UIj3EHQkdRDDysO2Pq'
+oauth_token_secret = 'KOcMn6Zw9vrKTqoLG9SMUkocmENDlQybW4VYULqHEgl0B'
 
-with open('csv/test.csv', 'wb') as f:
-    writer = csv.writer(f)
-    # writer.writerow([
-    #                     "away_team"
-    #                 ])
-    writer.writerows(list_of_winners)
+twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+
+while True:
+    try:
+        i = 0
+        if len(list_of_winners) > 0:
+            tweet = list_of_winners[i]
+            # twitter.update_status(status=tweet)
+            print tweet
+            i += 1
+            list_of_winners.remove(tweet)
+            time.sleep(1)
+        else:
+            print "More FMAA updates soon!"
+            break
+    except TwythonError as e:
+        print e
+
+print list_of_winners
