@@ -36,14 +36,14 @@ i = 0
 tag = list_of_games
 for game in tag:
     if tag[i][0][1] > tag[i][1][1]:
-        x = ["FINAL: " + tag[i][0][0] + " " + tag[i][0][1] + ", " + tag[i][1][0] + " " + tag[i][1][1] + ". #FMAA16"]
+        x = ["FINAL: " + tag[i][0][0] + " " + tag[i][0][1] + ", " + tag[i][1][0] + " " + tag[i][1][1] + ". #fmaa16"]
         list_of_winners.append(x)
     else:
-        x = ["FINAL: " + tag[i][1][0] + " " + tag[i][1][1] + ", " + tag[i][0][0] + " " + tag[i][0][1] + ". #FMAA16"]
+        x = ["FINAL: " + tag[i][1][0] + " " + tag[i][1][1] + ", " + tag[i][0][0] + " " + tag[i][0][1] + ". #fmaa16"]
         list_of_winners.append(x)
     i += 1
 
 # Create csv with sentences for bot to post to Twitter.
-with open('scores.csv', 'wb') as f:
+with open('csv/scores.csv', 'wb') as f:
     writer = csv.writer(f)
     writer.writerows(list_of_winners)
