@@ -2,8 +2,8 @@ import csv
 import requests
 from bs4 import BeautifulSoup
 
-# url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
-url = 'http://www.ncaa.com/scoreboard/basketball-men/d1/2016/02/12'
+url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
+# url = 'http://www.ncaa.com/scoreboard/basketball-men/d1/2016/02/17'
 response = requests.get(url)
 html = response.content
 

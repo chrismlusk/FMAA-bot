@@ -4,24 +4,25 @@ from twython import Twython, TwythonError
 import time
 import csv
 
-app_key = 'bfzIzp6FRmUChOFfujhvLwISE'
-app_secret = 'VoSkGgcJD29QlOCQmVyFtv7KxgwYYunuUSqUEh1zqB7IgnAj4Z'
-oauth_token = '21734466-gy5DbrVqB5V8H7pImfdMS17UIj3EHQkdRDDysO2Pq'
-oauth_token_secret = 'KOcMn6Zw9vrKTqoLG9SMUkocmENDlQybW4VYULqHEgl0B'
+# Authorize Friendship Mad-Bot app under @FriendMadness.
+app_key = '7K0AIkrAiIC5CblaZrAwfsm3e'
+app_secret = 'l52lRFrTDpv2jx02CmGChvm8M6fnybp6kFqwUj20DZpDLdYQ3V'
+oauth_token = '1263138942-YjCL0CXIw48ADkGI9rQ5PuE4ExFldXdrByHc60q'
+oauth_token_secret = '4pWuKAaOYl04qMQwNGvwtjeWhn6ndkcDI5YXNRAwF3kac'
 
 twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
 
 # # # --- BASIC STATUS
-# line = "Bot test 2."
+# line = "This is an automated message from the friendliest organization in sports."
 # twitter.update_status(status=line)
 
 # # --- SEARCH QUERIES
-search_results = twitter.search(q='sooners', count=5)
-try:
-    for tweet in search_results["statuses"]:
-        twitter.retweet(id=tweet["id_str"])
-except TwythonError as e:
-    print e
+# search_results = twitter.search(q='sooners', count=5)
+# try:
+#     for tweet in search_results["statuses"]:
+#         twitter.retweet(id=tweet["id_str"])
+# except TwythonError as e:
+#     print e
 
 # # # --- FILTERING SEARCH QUERIES
 # exclude = ["Jayhawks", "Boomer", "LOL"]

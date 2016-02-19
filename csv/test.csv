@@ -1,1 +1,18 @@
-"Arizona beats UCLA, 81-75. Arizona advances!","Dayton beats Rhode Island, 68-66. Dayton advances!","Arizona State beats USC, 74-67. Arizona State advances!","Princeton beats Cornell, 85-56. Princeton advances!","Ohio beats Buffalo, 94-75. Ohio advances!","Yale beats Dartmouth, 75-65. Yale advances!","Columbia beats Penn, 63-53. Columbia advances!","Harvard beats Brown, 79-73. Harvard advances!","St. Peter's beats Niagara, 72-59. St. Peter's advances!","Incarnate Word beats Central Ark., 71-69. Incarnate Word advances!","Monmouth beats Rider, 79-78. Monmouth advances!","Grand Canyon beats Seattle, 71-60. Grand Canyon advances!"
+1,False,"[u'Minnesota', u'71']","[u'Iowa', u'75']",02/14/minnesota-iowa
+2,False,"[u'Indiana', u'69']","[u'Michigan State', u'88']",02/14/indiana-michigan-st
+3,False,"[u'Pittsburgh', u'64']","[u'North Carolina', u'85']",02/14/pittsburgh-north-carolina
+4,False,"[u'Miami (Fla.)', u'67']","[u'Florida State', u'65']",02/14/miami-fl-florida-st
+5,False,"[u'USC', u'78']","[u'Arizona', u'86']",02/14/southern-california-arizona
+6,False,"[u'Syracuse', u'75']","[u'Boston College', u'61']",02/14/syracuse-boston-college
+7,False,"[u'New Hampshire', u'58']","[u'Stony Brook', u'59']",02/14/new-hampshire-stony-brook
+8,False,"[u'Maine', u'64']","[u'Albany', u'108']",02/14/maine-albany-ny
+9,False,"[u'Hartford', u'81']","[u'Vermont', u'92']",02/14/hartford-vermont
+10,False,"[u'Niagara', u'59']","[u'Rider', u'77']",02/14/niagara-rider
+11,False,"[u'Canisius', u'57']","[u""St. Peter's"", u'61']",02/14/canisius-st-peters
+12,False,"[u'Massachusetts', u'108']","[u'Duquesne', u'99']",02/14/massachusetts-duquesne
+13,False,"[u'South Florida', u'65']","[u'Temple', u'77']",02/14/south-fla-temple
+14,False,"[u'Evansville', u'74']","[u'Loyola Chicago', u'73']",02/14/evansville-loyola-il
+15,False,"[u'Bradley', u'60']","[u'Illinois State', u'75']",02/14/bradley-illinois-st
+16,False,"[u'Washington St.', u'47']","[u'Utah', u'88']",02/14/washington-st-utah
+17,False,"[u'UCLA', u'78']","[u'Arizona State', u'65']",02/14/ucla-arizona-st
+18,False,"[u'UMBC', u'92']","[u'Mass.-Lowell', u'96']",02/14/umbc-mass-lowell
