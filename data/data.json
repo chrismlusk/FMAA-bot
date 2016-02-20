@@ -1,0 +1,200 @@
+{
+  "new-hampshire-stony-brook": {
+    "home": {
+      "score": "59",
+      "team": "Stony Brook"
+    },
+    "away": {
+      "score": "58",
+      "team": "New Hampshire"
+    },
+    "is_posted": false
+  },
+  "maine-albany-ny": {
+    "home": {
+      "score": "108",
+      "team": "Albany"
+    },
+    "away": {
+      "score": "64",
+      "team": "Maine"
+    },
+    "is_posted": false
+  },
+  "ucla-arizona-st": {
+    "home": {
+      "score": "65",
+      "team": "Arizona State"
+    },
+    "away": {
+      "score": "78",
+      "team": "UCLA"
+    },
+    "is_posted": false
+  },
+  "evansville-loyola-il": {
+    "home": {
+      "score": "73",
+      "team": "Loyola Chicago"
+    },
+    "away": {
+      "score": "74",
+      "team": "Evansville"
+    },
+    "is_posted": false
+  },
+  "south-fla-temple": {
+    "home": {
+      "score": "77",
+      "team": "Temple"
+    },
+    "away": {
+      "score": "65",
+      "team": "South Florida"
+    },
+    "is_posted": false
+  },
+  "bradley-illinois-st": {
+    "home": {
+      "score": "75",
+      "team": "Illinois State"
+    },
+    "away": {
+      "score": "60",
+      "team": "Bradley"
+    },
+    "is_posted": false
+  },
+  "umbc-mass-lowell": {
+    "home": {
+      "score": "96",
+      "team": "Mass.-Lowell"
+    },
+    "away": {
+      "score": "92",
+      "team": "UMBC"
+    },
+    "is_posted": false
+  },
+  "southern-california-arizona": {
+    "home": {
+      "score": "86",
+      "team": "Arizona"
+    },
+    "away": {
+      "score": "78",
+      "team": "USC"
+    },
+    "is_posted": false
+  },
+  "indiana-michigan-st": {
+    "home": {
+      "score": "88",
+      "team": "Michigan State"
+    },
+    "away": {
+      "score": "69",
+      "team": "Indiana"
+    },
+    "is_posted": false
+  },
+  "niagara-rider": {
+    "home": {
+      "score": "77",
+      "team": "Rider"
+    },
+    "away": {
+      "score": "59",
+      "team": "Niagara"
+    },
+    "is_posted": false
+  },
+  "hartford-vermont": {
+    "home": {
+      "score": "92",
+      "team": "Vermont"
+    },
+    "away": {
+      "score": "81",
+      "team": "Hartford"
+    },
+    "is_posted": false
+  },
+  "washington-st-utah": {
+    "home": {
+      "score": "88",
+      "team": "Utah"
+    },
+    "away": {
+      "score": "47",
+      "team": "Washington St."
+    },
+    "is_posted": false
+  },
+  "minnesota-iowa": {
+    "home": {
+      "score": "75",
+      "team": "Iowa"
+    },
+    "away": {
+      "score": "71",
+      "team": "Minnesota"
+    },
+    "is_posted": false
+  },
+  "miami-fl-florida-st": {
+    "home": {
+      "score": "65",
+      "team": "Florida State"
+    },
+    "away": {
+      "score": "67",
+      "team": "Miami (Fla.)"
+    },
+    "is_posted": false
+  },
+  "massachusetts-duquesne": {
+    "home": {
+      "score": "99",
+      "team": "Duquesne"
+    },
+    "away": {
+      "score": "108",
+      "team": "Massachusetts"
+    },
+    "is_posted": false
+  },
+  "pittsburgh-north-carolina": {
+    "home": {
+      "score": "85",
+      "team": "North Carolina"
+    },
+    "away": {
+      "score": "64",
+      "team": "Pittsburgh"
+    },
+    "is_posted": false
+  },
+  "syracuse-boston-college": {
+    "home": {
+      "score": "61",
+      "team": "Boston College"
+    },
+    "away": {
+      "score": "75",
+      "team": "Syracuse"
+    },
+    "is_posted": false
+  },
+  "canisius-st-peters": {
+    "home": {
+      "score": "61",
+      "team": "St. Peter's"
+    },
+    "away": {
+      "score": "57",
+      "team": "Canisius"
+    },
+    "is_posted": false
+  }
+}

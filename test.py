@@ -1,7 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
-import csv
+import re
+import json
+import os
 from twython import Twython, TwythonError
+import time
 
 # url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
 url = 'http://www.ncaa.com/scoreboard/basketball-men/d1/2016/02/14'
@@ -10,73 +13,81 @@ html = response.content
 soup = BeautifulSoup(html, 'lxml')
 scoreboard = soup.find(id='scoreboard')
 
-# Iterate and scrape data for games that are final.
-list_of_games = []
-add_id = 1
+dict_of_games = {}
 is_posted = False
 games = scoreboard.find_all('section', class_='game')
+# --- Iterate and scrape data for games that are final.
 for game in games:
     if game.find('div', class_='final') is None:
         continue
-    game_id = game['id'].replace('gamecenter-/game/basketball-men/d1/2016/', '')
-    list_of_rows = []
-    rows = game.find_all('tr')[1:]
+    game_id = game['id']
+    pattern = r'^(.*[\\\/])'  # --- Find all chars before last slash.
+    key = re.sub(pattern, '', game_id)
+    # --- Each dict has a key of the id scraped from the table.
+    dict_of_games[key] = {
+        'away': {
+            'team': None,
+            'score': None
+        },
+        'home': {
+            'team': None,
+            'score': None
+        },
+        'is_posted': False
+    }
+    rows = game.find_all('tr')[1:]  # --- Skip the first row in table.
     for row in rows:
-        list_of_cells = []
         cells = row.find_all('td', {'class': ['school', 'final']})
-        for cell in cells:
-            if 'school' in cell.attrs['class']:
-                team = cell.find('a').text
-                list_of_cells.append(team)
-            elif 'final' in cell.attrs['class']:
-                score = cell.text
-                list_of_cells.append(score)
-        list_of_rows.append(list_of_cells)
-    list_of_rows.insert(0, add_id)
-    list_of_rows.insert(1, is_posted)
-    list_of_rows.append(game_id)
-    list_of_games.append(list_of_rows)
-    add_id += 1
+        if rows.index(row) == 0:  # --- Index 0 is away team.
+            for cell in cells:
+                if 'school' in cell.attrs['class']:
+                    team = cell.find('a').text.strip()
+                    dict_of_games[key]['away']['team'] = team
+                elif 'final' in cell.attrs['class']:
+                    score = cell.text.strip()
+                    dict_of_games[key]['away']['score'] = score
+        elif rows.index(row) == 1:  # --- Index 1 is home team.
+            for cell in cells:
+                if 'school' in cell.attrs['class']:
+                    team = cell.find('a').text.strip()
+                    dict_of_games[key]['home']['team'] = team
+                elif 'final' in cell.attrs['class']:
+                    score = cell.text.strip()
+                    dict_of_games[key]['home']['score'] = score
 
-# # Dump game data into a csv.
-# file_path = 'csv/test.csv'
-# with open(file_path, 'wb') as f:
-#     writer = csv.writer(f)
-#     writer.writerows(list_of_games)
+file_path = 'data/data.json'
+try:
+    # --- If there is no data in the JSON file, create a new one.
+    if os.stat(file_path).st_size == 0:
+        with open(file_path, 'wb') as f:
+            json.dump(dict_of_games, f)
+            print "New JSON file started."
+    else:
+        with open(file_path, 'rb+') as f:
+            saved_dict = json.load(f)
+            for item in dict_of_games.keys():
+                if item in saved_dict:
+                    dict_of_games.pop(item, None)
+            # --- If there are new game results, add them to the file.
+            if dict_of_games:
+                new_items = json.dumps(dict_of_games).replace('{', ',', 1)
+                f.seek(-2, 2)
+                f.write(new_items)
+                print "New results added to JSON file."
+            # --- Otherwise, don't change the file.
+            else:
+                print "Nothing new right now."
 
-# Determine winners and write game results.
-list_of_winners = []
-for row in list_of_games:
-    if not row[1]:
-        h_team = row[3][0]
-        a_team = row[2][0]
-        h_score = row[3][1]
-        a_score = row[2][1]
-        list_of_sentences = []
-        if h_score > a_score:
-            update = "%s beats %s, %s-%s. %s advances!" % (h_team, a_team, h_score, a_score, h_team)
-            list_of_sentences.append(update)
-            row[1] = True
-        else:
-            update = "%s beats %s, %s-%s. %s advances!" % (a_team, h_team, a_score, h_score, a_team)
-            list_of_sentences.append(update)
-    list_of_winners.append(list_of_sentences)
+except OSError as e:
+    print e
 
-# print list_of_winners
+# --- Authorize Friendship Mad-Bot app under @FriendMadness.
+app_key = '7K0AIkrAiIC5CblaZrAwfsm3e'
+app_secret = 'l52lRFrTDpv2jx02CmGChvm8M6fnybp6kFqwUj20DZpDLdYQ3V'
+oauth_token = '1263138942-YjCL0CXIw48ADkGI9rQ5PuE4ExFldXdrByHc60q'
+oauth_token_secret = '4pWuKAaOYl04qMQwNGvwtjeWhn6ndkcDI5YXNRAwF3kac'
 
-# Dump sentences into a new csv.
-file_path = 'csv/test-results.csv'
-with open(file_path, 'wb') as f:
-    writer = csv.writer(f)
-    writer.writerows(list_of_winners)
-
-# # Authorize Friendship Mad-Bot app under @FriendMadness.
-# app_key = '7K0AIkrAiIC5CblaZrAwfsm3e'
-# app_secret = 'l52lRFrTDpv2jx02CmGChvm8M6fnybp6kFqwUj20DZpDLdYQ3V'
-# oauth_token = '1263138942-YjCL0CXIw48ADkGI9rQ5PuE4ExFldXdrByHc60q'
-# oauth_token_secret = '4pWuKAaOYl04qMQwNGvwtjeWhn6ndkcDI5YXNRAwF3kac'
-
-# twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
 
 # while True:
 #     try:
@@ -95,3 +106,4 @@ with open(file_path, 'wb') as f:
 #         print e
 
 # print list_of_winners
+

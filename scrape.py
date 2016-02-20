@@ -48,6 +48,6 @@ for row in list_of_games:
     list_of_winners.append(list_of_sentences)
 
 # Create csv with sentences for bot to post to Twitter.
-with open('csv/scores.csv', 'wb') as f:
+with open('data/scores.csv', 'wb') as f:
     writer = csv.writer(f)
     writer.writerows(list_of_winners)
