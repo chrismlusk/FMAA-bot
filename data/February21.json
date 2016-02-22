@@ -1,0 +1,184 @@
+{
+    "denver-south-dakota": [
+        "Denver",
+        "76",
+        "South Dakota",
+        "71",
+        false
+    ],
+    "monmouth-st-peters": [
+        "Monmouth",
+        "82",
+        "St. Peter's",
+        "75",
+        false
+    ],
+    "boston-college-wake-forest": [
+        "Boston College",
+        "48",
+        "Wake Forest",
+        "74",
+        false
+    ],
+    "george-mason-massachusetts": [
+        "George Mason",
+        "64",
+        "Massachusetts",
+        "70",
+        false
+    ],
+    "wichita-st-indiana-st": [
+        "Wichita State",
+        "84",
+        "Indiana State",
+        "51",
+        false
+    ],
+    "seton-hall-st-johns-ny": [
+        "Seton Hall",
+        "62",
+        "St. John's",
+        "61",
+        false
+    ],
+    "temple-houston": [
+        "Temple",
+        "69",
+        "Houston",
+        "66",
+        false
+    ],
+    "east-carolina-smu": [
+        "East Carolina",
+        "63",
+        "SMU",
+        "74",
+        false
+    ],
+    "loyola-il-missouri-st": [
+        "Loyola Chicago",
+        "75",
+        "Missouri State",
+        "62",
+        false
+    ],
+    "michigan-maryland": [
+        "Michigan",
+        "82",
+        "Maryland",
+        "86",
+        false
+    ],
+    "loyola-maryland-colgate": [
+        "Loyola (Md.)",
+        "90",
+        "Colgate",
+        "93",
+        false
+    ],
+    "northeastern-hofstra": [
+        "Northeastern",
+        "60",
+        "Hofstra",
+        "65",
+        false
+    ],
+    "la-salle-george-washington": [
+        "La Salle",
+        "50",
+        "Geo. Washington",
+        "90",
+        false
+    ],
+    "oakland-ill-chicago": [
+        "Oakland",
+        "74",
+        "Illinois-Chicago",
+        "63",
+        false
+    ],
+    "stony-brook-maine": [
+        "Stony Brook",
+        "75",
+        "Maine",
+        "56",
+        false
+    ],
+    "detroit-valparaiso": [
+        "Detroit",
+        "74",
+        "Valparaiso",
+        "90",
+        false
+    ],
+    "boston-u-bucknell": [
+        "Boston U.",
+        "59",
+        "Bucknell",
+        "80",
+        false
+    ],
+    "illinois-wisconsin": [
+        "Illinois",
+        "60",
+        "Wisconsin",
+        "69",
+        false
+    ],
+    "uab-middle-tenn": [
+        "UAB",
+        "77",
+        "Middle Tenn.",
+        "67",
+        false
+    ],
+    "american-holy-cross": [
+        "American",
+        "71",
+        "Holy Cross",
+        "70",
+        false
+    ],
+    "tulsa-ucf": [
+        "Tulsa",
+        "75",
+        "UCF",
+        "67",
+        false
+    ],
+    "manhattan-quinnipiac": [
+        "Manhattan",
+        "63",
+        "Quinnipiac",
+        "59",
+        false
+    ],
+    "utah-southern-california": [
+        "Utah",
+        "80",
+        "USC",
+        "69",
+        false
+    ],
+    "lafayette-lehigh": [
+        "Lafayette",
+        "61",
+        "Lehigh",
+        "73",
+        false
+    ],
+    "southeastern-la-abilene-christian": [
+        "Southeastern La.",
+        "80",
+        "Abilene Christian",
+        "91",
+        false
+    ],
+    "san-diego-st-san-jose-st": [
+        "San Diego State",
+        "78",
+        "San Jose State",
+        "56",
+        false
+    ]
+}

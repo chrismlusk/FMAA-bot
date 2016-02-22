@@ -11,8 +11,7 @@ def get_data():
 
 
 def get_date():
-    date = get_data().find('h2').text.split(',')[1].replace(' ', '')
-    return date
+    return get_data().find('h2').text.split(',')[1].replace(' ', '')
 
 
 def parse_row(row):
@@ -21,29 +20,20 @@ def parse_row(row):
     return team, score
 
 
-def compare_dicts(new_dict):
+def write_data(web_data):
     file_path = 'data/' + get_date() + '.json'
     if os.path.exists(file_path):
-        with open(file_path, 'r+') as f:
-            json_file = json.load(f)
-            for key in json_file:
-                if key in new_dict:
-                    del new_dict[key]
-            if new_dict:
-                updated_dict = json_file.copy()
-                updated_dict.update(new_dict)
-                f.seek(0)
-                json.dump(updated_dict, f, indent=4, separators=(',', ': '))
-                print "New results to add."
-            else:
-                print "Nothing new right now."
+        with open(file_path, 'r') as f:
+            local_data = json.load(f)
     else:
-        if new_dict:
-            with open(file_path, 'w') as f:
-                json.dump(new_dict, f, indent=4, separators=(',', ': '))
-                print "New JSON file started."
-        else:
-            print "No results yet."
+        local_data = {}
+
+    for k, v in web_data.items():
+        if k not in local_data:
+            local_data[k] = web_data[k]
+
+    with open(file_path, 'w') as f:
+        json.dump(local_data, f, indent=4, separators=(',', ': '))
 
 
 def main():
@@ -59,7 +49,7 @@ def main():
                         home_team, home_score,
                         is_posted]
 
-    compare_dicts(results)
+    write_data(results)
 
 
 if __name__ == '__main__':
