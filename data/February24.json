@@ -1,0 +1,205 @@
+{
+    "southern-ill-illinois-st": [
+        "Southern Ill.",
+        "50",
+        "Illinois State",
+        "73",
+        true
+    ],
+    "binghamton-umbc": [
+        "Binghamton",
+        "79",
+        "UMBC",
+        "80",
+        true
+    ],
+    "duquesne-st-bonaventure": [
+        "Duquesne",
+        "76",
+        "St. Bonaventure",
+        "80",
+        true
+    ],
+    "george-washington-richmond": [
+        "Geo. Washington",
+        "73",
+        "Richmond",
+        "61",
+        true
+    ],
+    "louisville-pittsburgh": [
+        "Louisville",
+        "67",
+        "Pittsburgh",
+        "60",
+        true
+    ],
+    "east-carolina-tulane": [
+        "East Carolina",
+        "79",
+        "Tulane",
+        "73",
+        true
+    ],
+    "new-hampshire-vermont": [
+        "New Hampshire",
+        "67",
+        "Vermont",
+        "73",
+        true
+    ],
+    "north-carolina-north-carolina-st": [
+        "North Carolina",
+        "80",
+        "NC State",
+        "68",
+        true
+    ],
+    "norfolk-st-morgan-st": [
+        "Norfolk State",
+        "72",
+        "Morgan State",
+        "89",
+        true
+    ],
+    "florida-am-howard": [
+        "Florida A&M",
+        "53",
+        "Howard",
+        "63",
+        true
+    ],
+    "navy-american": [
+        "Navy",
+        "65",
+        "American",
+        "72",
+        true
+    ],
+    "villanova-xavier": [
+        "Villanova",
+        "83",
+        "Xavier",
+        "90",
+        true
+    ],
+    "albany-ny-mass-lowell": [
+        "Albany",
+        "86",
+        "Mass.-Lowell",
+        "61",
+        true
+    ],
+    "new-orleans-southeastern-la": [
+        "New Orleans",
+        "81",
+        "Southeastern La.",
+        "93",
+        true
+    ],
+    "northwestern-michigan": [
+        "Northwestern",
+        "63",
+        "Michigan",
+        "72",
+        true
+    ],
+    "bucknell-lafayette": [
+        "Bucknell",
+        "86",
+        "Lafayette",
+        "83",
+        true
+    ],
+    "st-josephs-massachusetts": [
+        "Saint Joseph's",
+        "74",
+        "Massachusetts",
+        "57",
+        true
+    ],
+    "lehigh-colgate": [
+        "Lehigh",
+        "71",
+        "Colgate",
+        "54",
+        true
+    ],
+    "mississippi-st-texas-am": [
+        "Mississippi St.",
+        "66",
+        "Texas A&M",
+        "68",
+        true
+    ],
+    "hartford-maine": [
+        "Hartford",
+        "82",
+        "Maine",
+        "74",
+        true
+    ],
+    "marquette-creighton": [
+        "Marquette",
+        "66",
+        "Creighton",
+        "61",
+        true
+    ],
+    "houston-ucf": [
+        "Houston",
+        "88",
+        "UCF",
+        "61",
+        true
+    ],
+    "drake-missouri-st": [
+        "Drake",
+        "52",
+        "Missouri State",
+        "61",
+        true
+    ],
+    "vcu-george-mason": [
+        "VCU",
+        "69",
+        "George Mason",
+        "76",
+        true
+    ],
+    "siena-fairfield": [
+        "Siena",
+        "69",
+        "Fairfield",
+        "76",
+        true
+    ],
+    "holy-cross-loyola-maryland": [
+        "Holy Cross",
+        "63",
+        "Loyola (Md.)",
+        "78",
+        true
+    ],
+    "indiana-st-uni": [
+        "Indiana State",
+        "44",
+        "UNI",
+        "66",
+        true
+    ],
+    "georgia-auburn": [
+        "Georgia",
+        "81",
+        "Auburn",
+        "84",
+        true
+    ],
+    "fordham-la-salle": [
+        "Fordham",
+        "56",
+        "La Salle",
+        "53",
+        true
+    ]
+}

@@ -1,68 +1,102 @@
-# # # --- experimenting with twitter bots --- # # #
-
-from twython import Twython, TwythonError
+import requests
+from bs4 import BeautifulSoup
+import json
+import os
+from tokens import tokens
+from twython import Twython
 import time
-import csv
-
-# Authorize Friendship Mad-Bot app under @FriendMadness.
-app_key = '7K0AIkrAiIC5CblaZrAwfsm3e'
-app_secret = 'l52lRFrTDpv2jx02CmGChvm8M6fnybp6kFqwUj20DZpDLdYQ3V'
-oauth_token = '1263138942-YjCL0CXIw48ADkGI9rQ5PuE4ExFldXdrByHc60q'
-oauth_token_secret = '4pWuKAaOYl04qMQwNGvwtjeWhn6ndkcDI5YXNRAwF3kac'
-
-twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
-
-# # # --- BASIC STATUS
-# line = "This is an automated message from the friendliest organization in sports."
-# twitter.update_status(status=line)
-
-# # --- SEARCH QUERIES
-# search_results = twitter.search(q='sooners', count=5)
-# try:
-#     for tweet in search_results["statuses"]:
-#         twitter.retweet(id=tweet["id_str"])
-# except TwythonError as e:
-#     print e
-
-# # # --- FILTERING SEARCH QUERIES
-# exclude = ["Jayhawks", "Boomer", "LOL"]
-# include = ["sooners", "OU"]
-# search_for = " OR ".join(include)
-# blacklist = " -".join(exclude)
-# keywords = search_for + blacklist
-# results = twitter.search(q=keywords, count=1)
-# try:
-#     for tweet in results["statuses"]:
-#         try:
-#             print tweet
-#         except TwythonError as e:
-#             print e
-# except TwythonError as e:
-#     print e
 
 
-# # # --- POSTING FROM TXT FILE
-# path = 'csv/test.csv'
-# try:
-#     with open(path, 'r+') as f:
-#         buff = f.readlines()
+def get_data():
+    url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
+    soup = BeautifulSoup(requests.get(url).content, 'lxml')
+    return soup.find(id='scoreboard')
 
-#     for line in buff[:]:
-#         line = line.strip(r'\n')
-#         if len(line) <= 140 and len(line) > 0:
-#             # twitter.update_status(status=line)
-#             print line
-#             with open(path, 'w') as f:
-#                 buff.remove(line)
-#                 f.writelines(buff)
-#             time.sleep(10)
-#         else:
-#             with open(path, 'w') as f:
-#                 buff.remove(line)
-#                 f.writelines(buff)
-#             print ("Skipped! Char length violation.")
-#             continue
-#         # print ("Next line...")
 
-# except TwythonError as e:
-#     print (e)
+def get_date():
+    return get_data().find('h2').text.split(',')[1].replace(' ', '')
+
+
+def parse_row(row):
+    team = row.find_all('td', {'class': ['school']})[0].find('a').text.strip()
+    score = row.find_all('td', {'class': ['final']})[0].text.strip()
+    return team, score
+
+
+def set_file_path():
+    return 'data/' + get_date() + '.json'
+
+
+def read_data():
+    file_path = set_file_path()
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as f:
+            local_data = json.load(f)
+    else:
+        local_data = {}
+    return local_data
+
+
+def compare_web_and_local_data(web_data, local_data):
+    for k, v in web_data.items():
+        if k not in local_data:
+            local_data[k] = web_data[k]
+    return local_data
+
+
+def get_tokens():
+    app_key = tokens['app_key']
+    app_secret = tokens['app_secret']
+    oauth_token = tokens['oauth_token']
+    oauth_token_secret = tokens['oauth_token_secret']
+    return Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+
+
+def post_result_sentences(updated_data):
+    twitter = get_tokens()
+    for k, v in updated_data.items():
+        away_team = updated_data[k][0]
+        away_score = updated_data[k][1]
+        home_team = updated_data[k][2]
+        home_score = updated_data[k][3]
+        is_posted = updated_data[k][4]
+        if not is_posted:
+            if away_score > home_score:
+                result = "FINAL: %s beats %s, %s-%s. %s advances!" % (away_team, home_team, away_score, home_score, away_team)
+                # twitter.update_status(status=result)
+                print result
+                time.sleep(5)
+            else:
+                result = "FINAL: %s beats %s, %s-%s. %s advances!" % (home_team, away_team, home_score, away_score, home_team)
+                # twitter.update_status(status=result)
+                print result
+                time.sleep(5)
+            updated_data[k][4] = True
+    return updated_data
+
+
+def write_data(final_data):
+    file_path = set_file_path()
+    with open(file_path, 'w') as f:
+        json.dump(final_data, f, indent=4, separators=(',', ': '))
+
+
+def main():
+    web_data = {}
+    is_posted = False
+    for game in get_data().find_all('section', class_='game'):
+        if game.find('div', class_='final') is None:
+            continue
+        key = game['id'].split('/')[-1]
+        away_team, away_score = parse_row(game.find_all('tr')[1])
+        home_team, home_score = parse_row(game.find_all('tr')[2])
+        web_data[key] = [away_team, away_score, home_team, home_score, is_posted]
+
+    local_data = read_data()
+    updated_data = compare_web_and_local_data(web_data, local_data)
+    final_data = post_result_sentences(updated_data)
+    write_data(final_data)
+
+
+if __name__ == '__main__':
+    main()
