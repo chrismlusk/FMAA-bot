@@ -65,12 +65,12 @@ def post_result_sentences(updated_data):
                 result = "FINAL: %s beats %s, %s-%s. %s advances!" % (away_team, home_team, away_score, home_score, away_team)
                 # twitter.update_status(status=result)
                 print result
-                time.sleep(5)
+                time.sleep(2)
             else:
                 result = "FINAL: %s beats %s, %s-%s. %s advances!" % (home_team, away_team, home_score, away_score, home_team)
                 # twitter.update_status(status=result)
                 print result
-                time.sleep(5)
+                time.sleep(2)
             updated_data[k][4] = True
     return updated_data
 

@@ -1,0 +1,219 @@
+{
+    "georgia-tech-louisville": [
+        "Georgia Tech",
+        "53",
+        "Louisville",
+        "56",
+        true
+    ],
+    "kentucky-florida": [
+        "Kentucky",
+        "88",
+        "Florida",
+        "79",
+        true
+    ],
+    "miami-oh-buffalo": [
+        "Miami (Ohio)",
+        "67",
+        "Buffalo",
+        "59",
+        true
+    ],
+    "missouri-lsu": [
+        "Missouri",
+        "71",
+        "LSU",
+        "80",
+        true
+    ],
+    "stetson-njit": [
+        "Stetson",
+        "82",
+        "NJIT",
+        "67",
+        true
+    ],
+    "wake-forest-duke": [
+        "Wake Forest",
+        "71",
+        "Duke",
+        "79",
+        true
+    ],
+    "bowling-green-kent-st": [
+        "Bowling Green",
+        "54",
+        "Kent State",
+        "70",
+        true
+    ],
+    "san-diego-st-new-mexico": [
+        "San Diego State",
+        "83",
+        "New Mexico",
+        "56",
+        true
+    ],
+    "central-mich-ball-st": [
+        "Cent. Michigan",
+        "65",
+        "Ball State",
+        "57",
+        true
+    ],
+    "utah-st-air-force": [
+        "Utah State",
+        "78",
+        "Air Force",
+        "65",
+        true
+    ],
+    "lafayette-navy": [
+        "Lafayette",
+        "70",
+        "Navy",
+        "78",
+        true
+    ],
+    "sc-upstate-north-florida": [
+        "S.C. Upstate",
+        "69",
+        "North Florida",
+        "92",
+        true
+    ],
+    "toledo-western-mich": [
+        "Toledo",
+        "64",
+        "Western Mich.",
+        "70",
+        true
+    ],
+    "tennessee-vanderbilt": [
+        "Tennessee",
+        "69",
+        "Vanderbilt",
+        "86",
+        true
+    ],
+    "arkansas-st-ualr": [
+        "Arkansas State",
+        "80",
+        "UALR",
+        "89",
+        true
+    ],
+    "kennesaw-st-fla-gulf-coast": [
+        "Kennesaw State",
+        "64",
+        "FGCU",
+        "74",
+        true
+    ],
+    "texas-am-auburn": [
+        "Texas A&M",
+        "81",
+        "Auburn",
+        "63",
+        true
+    ],
+    "lipscomb-jacksonville": [
+        "Lipscomb",
+        "92",
+        "Jacksonville",
+        "89",
+        true
+    ],
+    "indiana-iowa": [
+        "Indiana",
+        "81",
+        "Iowa",
+        "78",
+        true
+    ],
+    "dayton-richmond": [
+        "Dayton",
+        "85",
+        "Richmond",
+        "84",
+        true
+    ],
+    "grand-canyon-st-marys-ca": [
+        "Grand Canyon",
+        "64",
+        "St. Mary's (Cal.)",
+        "73",
+        true
+    ],
+    "northern-ill-eastern-mich": [
+        "Northern Ill.",
+        "71",
+        "Eastern Mich.",
+        "75",
+        true
+    ],
+    "baylor-oklahoma": [
+        "Baylor",
+        "71",
+        "Oklahoma",
+        "73",
+        true
+    ],
+    "texas-st-texas-arlington": [
+        "Texas State",
+        "69",
+        "Texas-Arlington",
+        "75",
+        true
+    ],
+    "ohio-akron": [
+        "Ohio",
+        "76",
+        "Akron",
+        "91",
+        true
+    ],
+    "purdue-nebraska": [
+        "Purdue",
+        "81",
+        "Nebraska",
+        "62",
+        true
+    ],
+    "holy-cross-loyola-maryland": [
+        "Holy Cross",
+        "72",
+        "Loyola (Md.)",
+        "67",
+        true
+    ],
+    "georgetown-marquette": [
+        "Georgetown",
+        "87",
+        "Marquette",
+        "88",
+        true
+    ],
+    "george-mason-george-washington": [
+        "George Mason",
+        "52",
+        "Geo. Washington",
+        "74",
+        true
+    ],
+    "depaul-villanova": [
+        "DePaul",
+        "62",
+        "Villanova",
+        "83",
+        true
+    ],
+    "virginia-clemson": [
+        "Virginia",
+        "64",
+        "Clemson",
+        "57",
+        true
+    ]
+}

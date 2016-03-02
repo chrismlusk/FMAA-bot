@@ -13,6 +13,13 @@
         "80",
         true
     ],
+    "tennessee-south-carolina": [
+        "Tennessee",
+        "58",
+        "South Carolina",
+        "84",
+        true
+    ],
     "duquesne-st-bonaventure": [
         "Duquesne",
         "76",
@@ -48,6 +55,20 @@
         "73",
         true
     ],
+    "notre-dame-wake-forest": [
+        "Notre Dame",
+        "69",
+        "Wake Forest",
+        "58",
+        true
+    ],
+    "arizona-colorado": [
+        "Arizona",
+        "72",
+        "Colorado",
+        "75",
+        true
+    ],
     "north-carolina-north-carolina-st": [
         "North Carolina",
         "80",
@@ -80,6 +101,20 @@
         "Villanova",
         "83",
         "Xavier",
+        "90",
+        true
+    ],
+    "air-force-fresno-st": [
+        "Air Force",
+        "63",
+        "Fresno State",
+        "64",
+        true
+    ],
+    "long-beach-st-uc-irvine": [
+        "Long Beach St.",
+        "67",
+        "UC Irvine",
         "90",
         true
     ],
@@ -118,11 +153,39 @@
         "57",
         true
     ],
+    "utah-st-nevada": [
+        "Utah State",
+        "68",
+        "Nevada",
+        "73",
+        true
+    ],
     "lehigh-colgate": [
         "Lehigh",
         "71",
         "Colgate",
         "54",
+        true
+    ],
+    "washington-oregon-st": [
+        "Washington",
+        "81",
+        "Oregon State",
+        "82",
+        true
+    ],
+    "wichita-st-loyola-il": [
+        "Wichita State",
+        "76",
+        "Loyola Chicago",
+        "54",
+        true
+    ],
+    "san-diego-st-wyoming": [
+        "San Diego State",
+        "73",
+        "Wyoming",
+        "61",
         true
     ],
     "mississippi-st-texas-am": [
@@ -139,6 +202,20 @@
         "74",
         true
     ],
+    "washington-st-oregon": [
+        "Washington St.",
+        "62",
+        "Oregon",
+        "76",
+        true
+    ],
+    "wisconsin-iowa": [
+        "Wisconsin",
+        "67",
+        "Iowa",
+        "59",
+        true
+    ],
     "marquette-creighton": [
         "Marquette",
         "66",
@@ -151,6 +228,13 @@
         "88",
         "UCF",
         "61",
+        true
+    ],
+    "oklahoma-st-oklahoma": [
+        "Oklahoma State",
+        "49",
+        "Oklahoma",
+        "71",
         true
     ],
     "drake-missouri-st": [
