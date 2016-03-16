@@ -25,7 +25,8 @@ def parse_row(row):
 
 
 def set_daily_file_path():
-    return 'data/' + get_date() + '.json'
+    path = 'data/' + get_date() + '.json'
+    return os.path.abspath(path)
 
 
 def read_data(file):
@@ -54,7 +55,8 @@ def get_tokens():
 
 
 def pair_teams_with_friends(data):
-    friend_data = read_data('data/_friends.json')
+    path = os.path.abspath('data/_friends.json')
+    friend_data = read_data(path)
     for k, v in friend_data.items():
         if k == data:
             if not friend_data[k][2]:
