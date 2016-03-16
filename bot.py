@@ -10,7 +10,7 @@ import time
 def get_data():
     # url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
     url = 'http://www.ncaa.com/scoreboard/basketball-men/d1/2016/03/13'
-    soup = BeautifulSoup(requests.get(url).content, 'lxml')
+    soup = BeautifulSoup(requests.get(url).content, 'html5lib')
     return soup.find(id='scoreboard')
 
 
@@ -119,7 +119,7 @@ def main():
     local_data = read_data(set_daily_file_path())
     updated_data = compare_web_and_local_data(web_data, local_data)
     final_data = post_result_sentences(updated_data)
-    write_data(final_data)
+    # write_data(final_data)
 
 
 if __name__ == '__main__':
