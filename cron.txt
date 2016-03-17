@@ -1,0 +1,1 @@
+* * * * * /Users/chrismlusk/Desktop/Code/FMAA-bot/bot.py > /dev/ttys001

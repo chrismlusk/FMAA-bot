@@ -1,0 +1,23 @@
+{
+    "butler-texas-tech": [
+        "Butler",
+        "71",
+        "Texas Tech",
+        "61",
+        true
+    ],
+    "unc-wilmington-duke": [
+        "UNCW",
+        "85",
+        "Duke",
+        "93",
+        true
+    ],
+    "uconn-colorado": [
+        "Connecticut",
+        "74",
+        "Colorado",
+        "67",
+        true
+    ]
+}

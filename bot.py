@@ -8,9 +8,8 @@ import time
 
 
 def get_data():
-    # url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
-    url = 'http://www.ncaa.com/scoreboard/basketball-men/d1/2016/03/13'
-    soup = BeautifulSoup(requests.get(url).content, 'html5lib')
+    url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
+    soup = BeautifulSoup(requests.get(url).content, 'lxml')
     return soup.find(id='scoreboard')
 
 
@@ -85,15 +84,15 @@ def post_result_sentences(updated_data):
             if away_score > home_score:
                 if away_friend and home_friend:
                     result = "FINAL: %s (%s) beats %s (%s), %s-%s. %s advances. #FMAA16" % (away_friend[0], away_team, home_friend[0], home_team, away_score, home_score, away_friend[1])
-                    # twitter.update_status(status=result)
-                    print result
+                    twitter.update_status(status=result)
+                    # print result
                     time.sleep(2)
                     updated_data[k][4] = True
             else:
                 if away_friend and home_friend:
                     result = "FINAL: %s (%s) beats %s (%s), %s-%s. %s advances. #FMAA16" % (home_friend[0], home_team, away_friend[0], away_team, home_score, away_score, home_friend[1])
-                    # twitter.update_status(status=result)
-                    print result
+                    twitter.update_status(status=result)
+                    # print result
                     time.sleep(2)
                     updated_data[k][4] = True
     return updated_data
@@ -119,7 +118,7 @@ def main():
     local_data = read_data(set_daily_file_path())
     updated_data = compare_web_and_local_data(web_data, local_data)
     final_data = post_result_sentences(updated_data)
-    # write_data(final_data)
+    write_data(final_data)
 
 
 if __name__ == '__main__':

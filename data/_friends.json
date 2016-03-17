@@ -5,12 +5,6 @@
         "@iBrianEdison",
         "Big 8"
     ],
-    "Southern Univ.": [
-        "Brian",
-        "Henry",
-        "@iBrianEdison",
-        "Big 8"
-    ],
     "Holy Cross": [
         "Brian",
         "Henry",
@@ -257,12 +251,6 @@
         "@elwelleats",
         "OKC"
     ],
-    "Tulsa": [
-        "Greg",
-        "Elwell",
-        "@elwelleats",
-        "OKC"
-    ],
     "Texas": [
         "Michaela",
         "W.",
@@ -282,12 +270,6 @@
         "Catholic 7"
     ],
     "Wichita State": [
-        "Scott",
-        "Michael",
-        "@sothenscottsaid",
-        "Catholic 7"
-    ],
-    "Vanderbilt": [
         "Scott",
         "Michael",
         "@sothenscottsaid",
@@ -380,13 +362,13 @@
     "USC": [
         "Briana",
         "H.",
-        false,
+        "@bri_cheezy",
         "The Urb"
     ],
     "Connecticut": [
         "Briana",
         "H.",
-        false,
+        "@bri_cheezy",
         "The Urb"
     ],
     "Texas Tech": [
