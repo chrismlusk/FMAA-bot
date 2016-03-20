@@ -1,0 +1,79 @@
+{
+    "indiana-kentucky": [
+        "Indiana",
+        "73",
+        "Kentucky",
+        "67",
+        true
+    ],
+    "wagner-creighton": [
+        "Wagner",
+        "54",
+        "Creighton",
+        "87",
+        false
+    ],
+    "providence-north-carolina": [
+        "Providence",
+        "66",
+        "North Carolina",
+        "85",
+        true
+    ],
+    "uconn-kansas": [
+        "Connecticut",
+        "61",
+        "Kansas",
+        "73",
+        true
+    ],
+    "wichita-st-miami-fl": [
+        "Wichita State",
+        "57",
+        "Miami (Fla.)",
+        "65",
+        true
+    ],
+    "new-hampshire-coastal-caro": [
+        "New Hampshire",
+        "62",
+        "Coastal Caro.",
+        "71",
+        false
+    ],
+    "gonzaga-utah": [
+        "Gonzaga",
+        "82",
+        "Utah",
+        "59",
+        true
+    ],
+    "la-lafayette-furman": [
+        "La.-Lafayette",
+        "80",
+        "Furman",
+        "72",
+        false
+    ],
+    "yale-duke": [
+        "Yale",
+        "64",
+        "Duke",
+        "71",
+        true
+    ],
+    "ualr-iowa-st": [
+        "Little Rock",
+        "61",
+        "Iowa State",
+        "78",
+        true
+    ],
+    "butler-virginia": [
+        "Butler",
+        "69",
+        "Virginia",
+        "77",
+        true
+    ]
+}

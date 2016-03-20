@@ -73,9 +73,9 @@ def post_result_sentences(updated_data):
     twitter = get_tokens()
     for k, v in updated_data.items():
         away_team = updated_data[k][0]
-        away_score = updated_data[k][1]
+        away_score = int(updated_data[k][1])
         home_team = updated_data[k][2]
-        home_score = updated_data[k][3]
+        home_score = int(updated_data[k][3])
         is_posted = updated_data[k][4]
         home_friend = pair_teams_with_friends(home_team)
         away_friend = pair_teams_with_friends(away_team)
@@ -85,14 +85,14 @@ def post_result_sentences(updated_data):
                 if away_friend and home_friend:
                     result = "FINAL: %s (%s) beats %s (%s), %s-%s. %s advances. #FMAA16" % (away_friend[0], away_team, home_friend[0], home_team, away_score, home_score, away_friend[1])
                     twitter.update_status(status=result)
-                    # print result
+                    print result
                     time.sleep(2)
                     updated_data[k][4] = True
             else:
                 if away_friend and home_friend:
                     result = "FINAL: %s (%s) beats %s (%s), %s-%s. %s advances. #FMAA16" % (home_friend[0], home_team, away_friend[0], away_team, home_score, away_score, home_friend[1])
                     twitter.update_status(status=result)
-                    # print result
+                    print result
                     time.sleep(2)
                     updated_data[k][4] = True
     return updated_data
