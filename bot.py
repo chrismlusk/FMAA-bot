@@ -9,7 +9,7 @@ import time
 
 def get_data():
     url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
-    soup = BeautifulSoup(requests.get(url).content, 'html.parser')
+    soup = BeautifulSoup(requests.get(url).content, 'lxml')
     return soup.find(id='scoreboard')
 
 
