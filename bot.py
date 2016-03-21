@@ -83,14 +83,14 @@ def post_result_sentences(updated_data):
         if not is_posted:
             if away_score > home_score:
                 if away_friend and home_friend:
-                    result = "FINAL: %s (%s) beats %s (%s), %s-%s. %s advances. #FMAA16" % (away_friend[0], away_team, home_friend[0], home_team, away_score, home_score, away_friend[1])
+                    result = "FINAL: %s (%s) beats %s (%s), %s-%s. %s is an Elite friend this year. #FMAA16" % (away_friend[0], away_team, home_friend[0], home_team, away_score, home_score, away_friend[1])
                     twitter.update_status(status=result)
                     print result
                     time.sleep(2)
                     updated_data[k][4] = True
             else:
                 if away_friend and home_friend:
-                    result = "FINAL: %s (%s) beats %s (%s), %s-%s. %s advances. #FMAA16" % (home_friend[0], home_team, away_friend[0], away_team, home_score, away_score, home_friend[1])
+                    result = "FINAL: %s (%s) beats %s (%s), %s-%s. %s is an Elite friend this year. #FMAA16" % (home_friend[0], home_team, away_friend[0], away_team, home_score, away_score, home_friend[1])
                     twitter.update_status(status=result)
                     print result
                     time.sleep(2)

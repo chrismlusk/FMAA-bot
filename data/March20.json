@@ -1,0 +1,72 @@
+{
+    "hawaii-maryland": [
+        "Hawaii",
+        "60",
+        "Maryland",
+        "73",
+        true
+    ],
+    "stephen-f-austin-notre-dame": [
+        "Steph. F. Austin",
+        "75",
+        "Notre Dame",
+        "76",
+        true
+    ],
+    "uni-texas-am": [
+        "UNI",
+        "88",
+        "Texas A&M",
+        "92",
+        true
+    ],
+    "georgia-st-marys-ca": [
+        "Georgia",
+        "65",
+        "St. Mary's (Cal.)",
+        "77",
+        false
+    ],
+    "middle-tenn-syracuse": [
+        "Middle Tenn.",
+        "50",
+        "Syracuse",
+        "75",
+        true
+    ],
+    "ut-martin-ball-st": [
+        "Tennessee-Martin",
+        "80",
+        "Ball State",
+        "83",
+        false
+    ],
+    "iowa-villanova": [
+        "Iowa",
+        "68",
+        "Villanova",
+        "87",
+        true
+    ],
+    "vcu-oklahoma": [
+        "VCU",
+        "81",
+        "Oklahoma",
+        "85",
+        true
+    ],
+    "florida-ohio-st": [
+        "Florida",
+        "74",
+        "Ohio State",
+        "66",
+        false
+    ],
+    "wisconsin-xavier": [
+        "Wisconsin",
+        "66",
+        "Xavier",
+        "63",
+        true
+    ]
+}
