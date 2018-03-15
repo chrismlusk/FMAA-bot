@@ -2,3 +2,19 @@
 #Ignore API token#
 ##################
 tokens.py
+
+##################
+#virtualenv things#
+##################
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
+*.log
+__pycache__/
