@@ -1,159 +1,63 @@
 {
+    "Virginia": [
+        "Max",
+        "Calanni",
+        "@MaxRyann",
+        "Big 8"
+    ],
+    "Texas Southern": [
+        "Max",
+        "Calanni",
+        "@MaxRyann",
+        "Big 8"
+    ],
+    "Villanova": [
+        "Brian",
+        "Henry",
+        "@iBrianEdison",
+        "Big 8"
+    ],
+    "UMBC": [
+        "Brian",
+        "Henry",
+        "@iBrianEdison",
+        "Big 8"
+    ],
     "Kansas": [
-        "Brian",
-        "Henry",
-        "@iBrianEdison",
-        "Big 8"
+        "Jared",
+        "Lovelady",
+        "@MrLoveladyFTW",
+        "Pack-10"
     ],
-    "Holy Cross": [
-        "Brian",
-        "Henry",
-        "@iBrianEdison",
-        "Big 8"
+    "Radford": [
+        "Jared",
+        "Lovelady",
+        "@MrLoveladyFTW",
+        "Pack-10"
     ],
-    "Oregon": [
+    "Xavier": [
         "Austin",
         "Dean",
         "@monkeymanopeace",
         "Big 8"
     ],
-    "FGCU": [
+    "Penn": [
         "Austin",
         "Dean",
         "@monkeymanopeace",
         "Big 8"
     ],
     "North Carolina": [
-        "Chris",
-        "Lusk",
-        "@chrismlusk",
-        "CMA"
-    ],
-    "Hampton": [
-        "Chris",
-        "Lusk",
-        "@chrismlusk",
-        "CMA"
-    ],
-    "Virginia": [
-        "Jake",
-        "Lovett",
-        "@jllovett",
-        "CMA"
-    ],
-    "Austin Peay": [
-        "Jake",
-        "Lovett",
-        "@jllovett",
-        "CMA"
-    ],
-    "Villanova": [
-        "Katie",
-        "Rutledge",
-        "@ktrutuncensored",
-        "Big 8"
-    ],
-    "Middle Tenn.": [
-        "Katie",
-        "Rutledge",
-        "@ktrutuncensored",
-        "Big 8"
-    ],
-    "Oklahoma": [
-        "Max",
-        "Calanni",
-        "@MaxRyann",
-        "Big 8"
-    ],
-    "UNC Asheville": [
-        "Max",
-        "Calanni",
-        "@MaxRyann",
-        "Big 8"
-    ],
-    "Xavier": [
-        "Jessie",
-        "Opoien",
-        "@jessieopie",
-        "CMA"
-    ],
-    "Green Bay": [
-        "Jessie",
-        "Opoien",
-        "@jessieopie",
-        "CMA"
-    ],
-    "Michigan State": [
-        "Luke",
-        "McConnell",
-        "@lukemcconnell1",
-        "The Daily"
-    ],
-    "Weber State": [
-        "Luke",
-        "McConnell",
-        "@lukemcconnell1",
-        "The Daily"
-    ],
-    "Miami (Fla.)": [
-        "Kasey",
-        "Boes",
-        "@KaseyBoes",
-        "OKC"
-    ],
-    "Steph. F. Austin": [
-        "Kasey",
-        "Boes",
-        "@KaseyBoes",
-        "OKC"
-    ],
-    "Texas A&M": [
-        "Kyle",
-        "Todaro",
-        false,
-        "Big 8"
-    ],
-    "Gonzaga": [
-        "Kyle",
-        "Todaro",
-        false,
-        "Big 8"
-    ],
-    "West Virginia": [
         "Lindsey",
-        "Lusk",
+        "Ruta Lusk",
         "@lindseyrlusk",
         "The Daily"
     ],
-    "Fresno State": [
+    "CSU Fullerton": [
         "Lindsey",
-        "Lusk",
+        "Ruta Lusk",
         "@lindseyrlusk",
         "The Daily"
-    ],
-    "Utah": [
-        "Annelise",
-        "Russell",
-        "@AnneliseRussell",
-        "The Daily"
-    ],
-    "Buffalo": [
-        "Annelise",
-        "Russell",
-        "@AnneliseRussell",
-        "The Daily"
-    ],
-    "California": [
-        "Andrew",
-        "Boes",
-        "@mr_boes",
-        "OKC"
-    ],
-    "Iona": [
-        "Andrew",
-        "Boes",
-        "@mr_boes",
-        "OKC"
     ],
     "Duke": [
         "Greg",
@@ -161,226 +65,328 @@
         "@expastor",
         "OKC"
     ],
-    "Hawaii": [
+    "Lipscomb": [
         "Greg",
         "Horton",
         "@expastor",
         "OKC"
     ],
-    "Kentucky": [
-        "Chase",
-        "Cook",
-        "@chaseacook",
-        "The Daily"
-    ],
-    "UNCW": [
-        "Chase",
-        "Cook",
-        "@chaseacook",
-        "The Daily"
-    ],
-    "Iowa State": [
-        "Jeremiah",
-        "Davis",
-        "@jeremiahdavis10",
-        "CMA"
-    ],
-    "UNI": [
-        "Jeremiah",
-        "Davis",
-        "@jeremiahdavis10",
-        "CMA"
-    ],
-    "Maryland": [
-        "Kirsten",
-        "Therkelson",
-        "@kranstin",
-        "OKC"
-    ],
-    "Chattanooga": [
-        "Kirsten",
-        "Therkelson",
-        "@kranstin",
-        "OKC"
-    ],
-    "Baylor": [
-        "Matt",
-        "Gallant",
-        "@MattGallantt",
-        "Big 8"
-    ],
-    "South Dakota St.": [
-        "Matt",
-        "Gallant",
-        "@MattGallantt",
-        "Big 8"
-    ],
-    "Indiana": [
-        "Matt",
-        "Carney",
-        "@mdotcarney",
-        "The Daily"
-    ],
-    "Little Rock": [
-        "Matt",
-        "Carney",
-        "@mdotcarney",
-        "The Daily"
-    ],
     "Purdue": [
-        "Kedric",
-        "K.",
+        "Chris",
+        "Silberstein",
         false,
-        "The Daily"
+        "Pack-10"
     ],
-    "Yale": [
-        "Kedric",
-        "K.",
+    "Georgia State": [
+        "Chris",
+        "Silberstein",
         false,
-        "The Daily"
+        "Pack-10"
     ],
-    "Arizona": [
-        "Greg",
-        "Elwell",
-        "@elwelleats",
+    "Cincinnati": [
+        "Luke",
+        "Olsen",
+        "@lukeo83",
         "OKC"
+    ],
+    "Iona": [
+        "Luke",
+        "Olsen",
+        "@lukeo83",
+        "OKC"
+    ],
+    "Mich. St.": [
+        "Mason",
+        "Maidt",
+        false,
+        "Pack-10"
+    ],
+    "SFA": [
+        "Mason",
+        "Maidt",
+        false,
+        "Pack-10"
+    ],
+    "Tennessee": [
+        "Jeremiah",
+        "Davis",
+        "@jeremiahdavis10",
+        "CMA"
+    ],
+    "Bucknell": [
+        "Jeremiah",
+        "Davis",
+        "@jeremiahdavis10",
+        "CMA"
     ],
     "Michigan": [
-        "Greg",
-        "Elwell",
-        "@elwelleats",
-        "OKC"
+        "Jake",
+        "Lovett",
+        "@jllovett",
+        "CMA"
     ],
-    "Texas": [
-        "Michaela",
-        "W.",
-        false,
-        "Pack-10"
+    "Wright State": [
+        "Jake",
+        "Lovett",
+        "@jllovett",
+        "CMA"
     ],
-    "Stony Brook": [
-        "Michaela",
-        "W.",
-        false,
-        "Pack-10"
-    ],
-    "Notre Dame": [
-        "Scott",
-        "Michael",
-        "@sothenscottsaid",
-        "Catholic 7"
-    ],
-    "Wichita State": [
-        "Scott",
-        "Michael",
-        "@sothenscottsaid",
-        "Catholic 7"
-    ],
-    "Seton Hall": [
-        "Jono",
-        "Greco",
-        "@jonogreco13",
-        "The Daily"
-    ],
-    "CSU Bakersfield": [
-        "Jono",
-        "Greco",
-        "@jonogreco13",
-        "The Daily"
-    ],
-    "Iowa": [
-        "Jackson",
-        "A.",
-        false,
-        "OKC"
-    ],
-    "VCU": [
-        "Jackson",
-        "A.",
-        false,
-        "OKC"
-    ],
-    "Oregon State": [
+    "Texas Tech": [
         "Keifer",
         "Truett",
         "@Thesmeef",
+        "The Urb"
+    ],
+    "Montana": [
+        "Keifer",
+        "Truett",
+        "@Thesmeef",
+        "The Urb"
+    ],
+    "Auburn": [
+        "Adam",
+        "Kelley",
+        false,
+        "OKC"
+    ],
+    "Buffalo": [
+        "Adam",
+        "Kelley",
+        false,
+        "OKC"
+    ],
+    "Wichita State": [
+        "Jackson & Tarryn",
+        "Anderson",
+        false,
+        "OKC"
+    ],
+    "UNCG": [
+        "Jackson & Tarryn",
+        "Anderson",
+        false,
+        "OKC"
+    ],
+    "Gonzaga": [
+        "Kyle",
+        "Todaro",
+        false,
+        "Big 8"
+    ],
+    "Charleston": [
+        "Kyle",
+        "Todaro",
+        false,
+        "Big 8"
+    ],
+    "Arizona": [
+        "Chris",
+        "Lusk",
+        "@chrismlusk",
+        "CMA"
+    ],
+    "Marshall": [
+        "Chris",
+        "Lusk",
+        "@chrismlusk",
+        "CMA"
+    ],
+    "Kentucky": [
+        "Jessie",
+        "Opoien",
+        "@jessieopie",
+        "CMA"
+    ],
+    "New Mexico St.": [
+        "Jessie",
+        "Opoien",
+        "@jessieopie",
+        "CMA"
+    ],
+    "West Virginia": [
+        "Annelise",
+        "Russell",
+        "@AnneliseRussell",
+        "The Daily"
+    ],
+    "Davidson": [
+        "Annelise",
+        "Russell",
+        "@AnneliseRussell",
+        "The Daily"
+    ],
+    "Clemson": [
+        "Rocky",
+        "Thomas",
+        false,
+        "OKC"
+    ],
+    "South Dakota St.": [
+        "Rocky",
+        "Thomas",
+        false,
+        "OKC"
+    ],
+    "Ohio St.": [
+        "Brad",
+        "Ackerman",
+        false,
+        "OKC"
+    ],
+    "Murray State": [
+        "Brad",
+        "Ackerman",
+        false,
+        "OKC"
+    ],
+    "Florida": [
+        "Craig",
+        "Marose",
+        false,
+        "OKC"
+    ],
+    "Loyola Chicago": [
+        "Craig",
+        "Marose",
+        false,
+        "OKC"
+    ],
+    "Miami (Fla.)": [
+        "Maddi",
+        "Fox",
+        false,
+        "Pack-10"
+    ],
+    "Houston": [
+        "Jenni",
+        "Kincaid",
+        false,
+        "Pack-10"
+    ],
+    "TCU": [
+        "Emily",
+        "Brake",
+        "@emilysavannahb",
+        "Pack-10"
+    ],
+    "San Diego State": [
+        "Emily",
+        "Brake",
+        "@emilysavannahb",
+        "Pack-10"
+    ],
+    "Texas A&M": [
+        "Katy",
+        "Schönes",
+        false,
+        "Pack-10"
+    ],
+    "Butler": [
+        "Katy",
+        "Schönes",
+        false,
+        "Pack-10"
+    ],
+    "Arkansas": [
+        "Kenny",
+        "Hilburn",
+        false,
+        "Pack-10"
+    ],
+    "Texas": [
+        "Kenny",
+        "Hilburn",
+        false,
+        "Pack-10"
+    ],
+    "Nevada": [
+        "Scott",
+        "Michael",
+        "@sothenscottsaid",
+        "Catholic 7"
+    ],
+    "Oklahoma": [
+        "Scott",
+        "Michael",
+        "@sothenscottsaid",
+        "Catholic 7"
+    ],
+    "Rhode Island": [
+        "Daniel",
+        "Ruffin",
+        "@DanielRuffin",
+        "Pack-10"
+    ],
+    "Providence": [
+        "Daniel",
+        "Ruffin",
+        "@DanielRuffin",
+        "Pack-10"
+    ],
+    "Seton Hall": [
+        "Megan",
+        "Crawford",
+        "@MegzAndBacon4",
+        "The Urb"
+    ],
+    "Kansas St.": [
+        "Megan",
+        "Crawford",
+        "@MegzAndBacon4",
+        "The Urb"
+    ],
+    "Creighton": [
+        "Ty",
+        "Calanni",
+        "@tawo",
+        "Independent"
+    ],
+    "Florida State": [
+        "Ty",
+        "Calanni",
+        "@tawo",
+        "Independent"
+    ],
+    "Virginia Tech": [
+        "Luke",
+        "McConnell",
+        "@lukemcconnell1",
+        "The Daily"
+    ],
+    "NC State": [
+        "Luke",
+        "McConnell",
+        "@lukemcconnell1",
+        "The Daily"
+    ],
+    "Missouri": [
+        "Katie",
+        "Rutledge",
+        "@ktrutuncensored",
+        "Big 8"
+    ],
+    "Alabama": [
+        "Katie",
+        "Rutledge",
+        "@ktrutuncensored",
+        "Big 8"
+    ],
+    "St. Bonaventure": [
+        "Joseph",
+        "and Holly",
+        false,
+        "Independent"
+    ],
+    "Arizona St.": [
+        "Kaitlin",
+        "Murphey",
+        false,
         "The Urb"
     ],
     "Syracuse": [
-        "Keifer",
-        "Truett",
-        "@Thesmeef",
-        "The Urb"
-    ],
-    "Wisconsin": [
-        "Daniel",
-        "Ruffin",
-        "@DanielRuffin",
-        "Pack-10"
-    ],
-    "Temple": [
-        "Daniel",
-        "Ruffin",
-        "@DanielRuffin",
-        "Pack-10"
-    ],
-    "Dayton": [
-        "Joey",
-        "Stipek",
-        "@JoeyStipek",
-        "The Daily"
-    ],
-    "Pittsburgh": [
-        "Joey",
-        "Stipek",
-        "@JoeyStipek",
-        "The Daily"
-    ],
-    "Colorado": [
-        "Tarryn",
-        "Kahre",
-        "@tarrynkahre",
-        "OKC"
-    ],
-    "Butler": [
-        "Tarryn",
-        "Kahre",
-        "@tarrynkahre",
-        "OKC"
-    ],
-    "Saint Joseph's": [
-        "Nick",
-        "N.",
-        false,
-        "The Urb"
-    ],
-    "Providence": [
-        "Nick",
-        "N.",
-        false,
-        "The Urb"
-    ],
-    "USC": [
-        "Briana",
-        "H.",
-        "@bri_cheezy",
-        "The Urb"
-    ],
-    "Connecticut": [
-        "Briana",
-        "H.",
-        "@bri_cheezy",
-        "The Urb"
-    ],
-    "Texas Tech": [
-        "Kristen",
-        "Trail",
-        "@kristen_trail",
-        "The Urb"
-    ],
-    "Cincinnati": [
-        "Kristen",
-        "Trail",
-        "@kristen_trail",
+        "Jenny",
+        "Gilbreth",
+        "@jennygilbreth",
         "The Urb"
     ]
 }
