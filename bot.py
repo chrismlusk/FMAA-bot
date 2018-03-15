@@ -2,19 +2,20 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
-from tokens import tokens
+import tokens
 from twython import Twython
 import time
 
 
 def get_data():
     url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
+    # url = 'https://www.ncaa.com/scoreboard/basketball-men/d1/2018/03/10'
     soup = BeautifulSoup(requests.get(url).content, 'lxml')
-    return soup.find(id='scoreboard')
+    return soup.find(id='block-system-main')
 
 
 def get_date():
-    return get_data().find('h2').text.split(',')[1].replace(' ', '')
+    return get_data().select('ul.dates.daily > li.selected .date')[0].getText()
 
 
 def parse_row(row):
@@ -46,11 +47,7 @@ def compare_web_and_local_data(web_data, local_data):
 
 
 def get_tokens():
-    app_key = tokens['app_key']
-    app_secret = tokens['app_secret']
-    oauth_token = tokens['oauth_token']
-    oauth_token_secret = tokens['oauth_token_secret']
-    return Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+    return Twython(tokens.app_key, tokens.app_secret, tokens.oauth_token, tokens.oauth_token_secret)
 
 
 def pair_teams_with_friends(data):
@@ -83,16 +80,16 @@ def post_result_sentences(updated_data):
         if not is_posted:
             if away_score > home_score:
                 if away_friend and home_friend:
-                    result = "FINAL: %s (%s) beats %s (%s), %s-%s. %s is an Elite friend this year. #FMAA16" % (away_friend[0], away_team, home_friend[0], home_team, away_score, home_score, away_friend[1])
+                    result = "FINAL: %s (%s) defeats %s (%s), %s-%s. Welcome to the Big Dance, %s. #FMAA18" % (away_friend[0], away_team, home_friend[0], home_team, away_score, home_score, away_friend[1])
                     twitter.update_status(status=result)
-                    print result
+                    print(result)
                     time.sleep(2)
                     updated_data[k][4] = True
             else:
                 if away_friend and home_friend:
-                    result = "FINAL: %s (%s) beats %s (%s), %s-%s. %s is an Elite friend this year. #FMAA16" % (home_friend[0], home_team, away_friend[0], away_team, home_score, away_score, home_friend[1])
+                    result = "FINAL: %s (%s) defeats %s (%s), %s-%s. Welcome to the Big Dance, %s. #FMAA18" % (home_friend[0], home_team, away_friend[0], away_team, home_score, away_score, home_friend[1])
                     twitter.update_status(status=result)
-                    print result
+                    print(result)
                     time.sleep(2)
                     updated_data[k][4] = True
     return updated_data
