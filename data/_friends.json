@@ -98,13 +98,13 @@
     "Mich. St.": [
         "Mason",
         "Maidt",
-        false,
+        "@mason_maidt",
         "Pack-10"
     ],
     "SFA": [
         "Mason",
         "Maidt",
-        false,
+        "@mason_maidt",
         "Pack-10"
     ],
     "Tennessee": [
