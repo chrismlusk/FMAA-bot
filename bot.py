@@ -7,15 +7,15 @@ from twython import Twython
 import time
 
 
-def get_data():
+def get_data(targetId):
     url = 'http://www.ncaa.com/scoreboards/basketball-men/d1'
     # url = 'https://www.ncaa.com/scoreboard/basketball-men/d1/2018/03/10'
     soup = BeautifulSoup(requests.get(url).content, 'lxml')
-    return soup.find(id='block-system-main')
+    return soup.find(id=targetId)
 
 
 def get_date():
-    return get_data().select('ul.dates.daily > li.selected .date')[0].getText()
+    return get_data('scoreboardDateNav').select('.scoreboardDateNav-date.hasGames.current .scoreboardDateNav-dayNumber').getText()
 
 
 def parse_row(row):
@@ -25,7 +25,8 @@ def parse_row(row):
 
 
 def set_daily_file_path():
-    path = 'data/' + get_date() + '.json'
+    # path = 'data/' + get_date() + '.json'
+    path = 'data/' + 'TEST' + '.json'
     return os.path.abspath(path)
 
 
@@ -47,7 +48,10 @@ def compare_web_and_local_data(web_data, local_data):
 
 
 def get_tokens():
-    return Twython(tokens.app_key, tokens.app_secret, tokens.oauth_token, tokens.oauth_token_secret)
+    # return Twython(tokens.app_key, tokens.app_secret, tokens.oauth_token, tokens.oauth_token_secret)
+    twitter = Twython(tokens.APP_KEY, tokens.APP_SECRET)
+    auth = twitter.get_authentication_tokens()
+    return auth
 
 
 def pair_teams_with_friends(data):
@@ -80,14 +84,14 @@ def post_result_sentences(updated_data):
         if not is_posted:
             if away_score > home_score:
                 if away_friend and home_friend:
-                    result = "FINAL: %s (%s) uses supreme friendship to beat %s (%s), %s-%s. %s advances to the Elite Eight. #FMAA18" % (away_friend[0], away_team, home_friend[0], home_team, away_score, home_score, away_friend[1])
+                    result = "FINAL: %s (%s) uses supreme friendship to beat %s (%s), %s-%s. %s moves on to the next round. #FMAA19" % (away_friend[0], away_team, home_friend[0], home_team, away_score, home_score, away_friend[1])
                     twitter.update_status(status=result)
                     print(result)
                     time.sleep(2)
                     updated_data[k][4] = True
             else:
                 if away_friend and home_friend:
-                    result = "FINAL: %s (%s) defeats %s (%s), %s-%s, with an excellent display of friendship. %s advances to the Elite Eight. #FMAA18" % (home_friend[0], home_team, away_friend[0], away_team, home_score, away_score, home_friend[1])
+                    result = "FINAL: %s (%s) defeats %s (%s), %s-%s, with an excellent display of friendship. %s moves on to the next round. #FMAA19" % (home_friend[0], home_team, away_friend[0], away_team, home_score, away_score, home_friend[1])
                     twitter.update_status(status=result)
                     print(result)
                     time.sleep(2)
@@ -100,22 +104,26 @@ def write_data(final_data):
     with open(file_path, 'w') as f:
         json.dump(final_data, f, indent=4, separators=(',', ': '))
 
-
 def main():
     web_data = {}
     is_posted = False
-    for game in get_data().find_all('section', class_='game'):
-        if game.find('div', class_='final') is None:
-            continue
-        key = game['id'].split('/')[-1]
-        away_team, away_score = parse_row(game.find_all('tr')[1])
-        home_team, home_score = parse_row(game.find_all('tr')[2])
-        web_data[key] = [away_team, away_score, home_team, home_score, is_posted]
+    return get_data('scoreboard')
 
-    local_data = read_data(set_daily_file_path())
-    updated_data = compare_web_and_local_data(web_data, local_data)
-    final_data = post_result_sentences(updated_data)
-    write_data(final_data)
+# def main():
+#     web_data = {}
+#     is_posted = False
+#     for game in get_data().find_all('section', class_='game'):
+#         if game.find('div', class_='final') is None:
+#             continue
+#         key = game['id'].split('/')[-1]
+#         away_team, away_score = parse_row(game.find_all('tr')[1])
+#         home_team, home_score = parse_row(game.find_all('tr')[2])
+#         web_data[key] = [away_team, away_score, home_team, home_score, is_posted]
+
+#     local_data = read_data(set_daily_file_path())
+#     updated_data = compare_web_and_local_data(web_data, local_data)
+#     final_data = post_result_sentences(updated_data)
+#     write_data(final_data)
 
 
 if __name__ == '__main__':
